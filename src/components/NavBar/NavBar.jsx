@@ -1,5 +1,6 @@
 import React from "react";
 import '../../styles/App.scss';
+import CartWidget from "../CartWidget/CartWidget";
 
 function NavBar() {
   return (
@@ -20,9 +21,7 @@ function NavBar() {
         </li>
       </ul>
       <div className="iconos">
-        <a href="">
-          <i className="fas fa-shopping-cart fa-2x carrito"></i>
-        </a>
+      <CartWidget />
         <i className="fas fa-bars fa-2x menuBurger"></i>
       </div>
     </nav>

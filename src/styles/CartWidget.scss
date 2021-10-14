@@ -1,0 +1,12 @@
+i {
+  opacity: 0.75;
+  margin: 22px;
+  margin-right: 40px;
+  transition: 0.75s;
+  cursor: pointer;
+  color: #000;
+
+  &:hover {
+    opacity: 1;
+  }
+}
