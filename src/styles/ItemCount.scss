@@ -1,0 +1,48 @@
+.itemCards{
+    display: flex;
+    width: 150px;
+    height: 200px;
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid olive;
+    margin: 0 auto;
+
+    .img{
+        width: 50%;
+        height: 75px;
+        background-color: gray;
+        border: 2px solid olive;
+    }
+
+
+.counter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 2rem;
+    background-color: whitesmoke;
+    border-radius: 20%;
+
+    button{
+        width: 20%;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        background-color: darkgrey;
+        cursor: pointer;
+    }
+}
+.addCart{
+    border-radius: 10px;
+    border: none;
+    padding: 4px;
+    background-color: olive;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+}
