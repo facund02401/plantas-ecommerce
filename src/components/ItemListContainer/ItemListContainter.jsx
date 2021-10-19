@@ -1,10 +1,13 @@
 import React from "react";
+import ItemList from "../ItemList/ItemList";
+import Products from '../productos.json';
+
 
 
 function ItemListContainer(){
     return(
 <section>
-    <p>Item list container</p>
+    <ItemList items={Products}/>
 </section>
     )
 };
