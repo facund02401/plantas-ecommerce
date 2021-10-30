@@ -3,8 +3,12 @@ import { useState } from "react";
 import Item from "../Item/Item";
 import '../../styles/ItemList.scss'
 
+// import ItemDetailContainer from "../ItemDetailContainter/ItemDetailContainer";
+
 const ItemList = ({ items }) => { /*Recibe un array de objetos*/
   const [productos, setProductos] = useState([]);
+  //const [itemClicked, setItemClicked] = useState(false);
+ /*  const [wichItem, setWichItem] = useState(null) */
 
   const getItems = (items) => /*Funcion que crea una promesa*/
     new Promise((resolve, reject) => {
@@ -21,13 +25,20 @@ const ItemList = ({ items }) => { /*Recibe un array de objetos*/
     .then((res) => setProductos(res))//Si se resuelve, guarda el array como 'productos'
     .catch((err) => console.log(err));
 
+    const itemClickHandle = () => {
+    //  setItemClicked(true)
+      alert('clicked')
+    }
+
+ 
   return (
     <div className='item-list'>
-      {productos.length //chequea que el length del array no sea falsy
+      {/* itemClicked && <ItemDetailContainer /> */}
+      {/* !itemClicked &&  */(productos.length //chequea que el length del array no sea falsy
         ? productos.map((productos) => ( // mapea los productos y por cada uno crea un item
-            <Item item={productos} key={productos.id} />
+            <Item item={productos} key={productos.id} onClick={itemClickHandle} />
           ))//en caso de que productos devuelva falsy, muestra "Cargando productos"
-        : "Cargando productos..."}
+        : "Cargando productos...")}
     </div>
   );
 };

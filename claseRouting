@@ -1,0 +1,34 @@
+elhome va a ser /, igual que el itemlistContainter
+a eso se le va a poder agregar una categoria, que va a ser /category/:id
+despues de eso se podria entrar a itemDetailContainer con item/:id
+tambien vamos a tener cart con /cart
+por ultimo vamos a tener /checkout
+
+REACT ROUTER
+La vamos a instalar con npm install react-router-dom
+una vez instalado vamos a usar BrowserRouter, Switch y Route.
+Estos se importan en app.js
+
+Despues de eso vamos a definir nuestro router.
+Vamos a poner todo dentro del BrowserRouter. 
+
+Route es donde vamos a definir diferentes rutas, con diferentes props.
+La mas importante es el path, que es la que va a decirle a la app qué renderizar.
+Va a renderizar lo que está adentro del router. 
+Cuando ponemos un path "/", le ponemos exact adelante porque si no lo hacemos, va a
+tomar cualquier ruta que tenga una / adelante y la va a interpretar como lo mismo.
+Los Routes van dentro del switch.
+
+El switch va a buscar hasta encotnrar el path que matchea con el url de nuestro navegador.
+Una vez que lo encuentra, deja de buscar, eso es para optimizar recursos.
+En caso de dos path iguales va a renderizar el primero.
+El switch es uno solo y va dentro del BrowserRouter.
+
+Si ponemos una Route path * va a usar ese componente cuando el url no coincida
+con ninguno de los paths establecidos.
+
+
+PARAMETROS DINAMICOS
+se escribe en el path con dos puntos (:) antes del parametro. Por ejemplo, decimos que vaya 
+a pokemon/:pokemonQueQuiero, ahi puedo manipular pokemonQueQuiero con useParams.
+useParams me va a devolver el path dinamico
