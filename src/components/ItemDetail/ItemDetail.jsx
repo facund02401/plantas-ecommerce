@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/ItemDetail.scss';
 
 export default function ItemDetail(item) {
-    console.log(item.item)
+    
     return (
         <div className='item-detail__card'>
             <h1>ITEM DETAIL</h1>

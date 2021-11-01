@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavBar />
-        <ItemDetailContainer />
         <Switch>
           <Route exact path="/">
             <ItemListContainer />

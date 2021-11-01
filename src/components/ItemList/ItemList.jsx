@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Item from "../Item/Item";
 import "../../styles/ItemList.scss";
+import { Link } from "react-router-dom";
 
 const ItemList = ({ items }) => {
   /*Recibe un array de objetos*/
@@ -28,7 +29,7 @@ const ItemList = ({ items }) => {
         ? productos.map(
             (
               productos // mapea los productos y por cada uno crea un item
-            ) => <Item item={productos} key={productos.id} />
+            ) => <Link to={`/item/${productos.id}`}> <Item item={productos} key={productos.id} /> </Link>
           ) //en caso de que productos devuelva falsy, muestra "Cargando productos"
         : "Cargando productos..."}
     </div>

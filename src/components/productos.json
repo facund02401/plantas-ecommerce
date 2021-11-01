@@ -19,5 +19,30 @@
     "id": 3,
     "url": "https://http2.mlstatic.com/D_NQ_NP_944062-MLU45321604736_032021-O.jpg",
     "category": "plantas"
+  },
+  {
+    "name": "Sustrato Comun",
+    "price": 1200,
+    "id": 4,
+    "url": "https://www.flordeplanta.com.ar/wp-content/uploads/2014/05/sustrato.jpg",
+    "category": "sustrato"
+  },
+  {"name": "Sustrato Profesional",
+    "price": 1500,
+    "id": 5,
+    "url": "https://http2.mlstatic.com/D_NQ_NP_819675-MLA45991485623_052021-O.webp",
+    "category": "sustrato"
+  },
+  {"name": "Maceta mediana",
+    "price": 500,
+    "id": 6,
+    "url": "https://www.raizmadre.com/image/cache/data/productos/Macetas%20plasticas/Clasica-2014[1]-400x400.jpg",
+    "category": "maceta"
+  },
+  {"name": "Maceta Grande",
+    "price": 700,
+    "id": 7,
+    "url": "https://www.altagraciadeco.com.uy/wp-content/uploads/2018/04/maceta-alta.jpg",
+    "category": "maceta"
   }
 ]
