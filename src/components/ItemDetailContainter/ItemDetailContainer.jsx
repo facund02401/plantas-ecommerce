@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import Products from '../productos.json';
+import Products from "../productos.json";
 
 export default function ItemDetailContainer() {
-  const [selectedItem, setSelectedItem] = useState([]);
+  const [selectedItem, setSelectedItem] = useState("");
 
   const getItem = (item) =>
     new Promise((resolve, reject) => {
@@ -16,10 +16,15 @@ export default function ItemDetailContainer() {
       }, 2000);
     });
 
-  getItem(Products)
-    .then((res) => setSelectedItem(res[0]))
-    .catch((err) => console.log(err));
-  return <div>
-      <ItemDetail item={selectedItem} />
-  </div>;
+  useEffect(() => {
+    getItem(Products)
+      .then((res) => {
+        setSelectedItem(res[1]);
+      })
+      .catch((err) => console.log(err));
+  }, [selectedItem]);
+
+  return (
+    <div>{selectedItem ? <ItemDetail item={selectedItem} /> : "Cargando"}</div>
+  );
 }
