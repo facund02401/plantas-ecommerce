@@ -3,18 +3,21 @@
     "name": "Timbo",
     "price": 350,
     "id": 1,
-    "url": "https://http2.mlstatic.com/D_NQ_NP_632127-MLU40469427477_012020-O.jpg"
+    "url": "https://http2.mlstatic.com/D_NQ_NP_632127-MLU40469427477_012020-O.jpg",
+    "category": "plantas"
   },
   {
     "name": "Ibirapita",
     "price": 500,
     "id": 2,
-    "url": "https://http2.mlstatic.com/D_NQ_NP_796001-MLU41749469691_052020-O.jpg"
+    "url": "https://http2.mlstatic.com/D_NQ_NP_796001-MLU41749469691_052020-O.jpg",
+    "category": "plantas"
   },
   {
     "name": "Ombu",
     "price": 700,
     "id": 3,
-    "url": "https://http2.mlstatic.com/D_NQ_NP_944062-MLU45321604736_032021-O.jpg"
+    "url": "https://http2.mlstatic.com/D_NQ_NP_944062-MLU45321604736_032021-O.jpg",
+    "category": "plantas"
   }
 ]

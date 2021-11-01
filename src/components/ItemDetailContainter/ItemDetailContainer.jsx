@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import Products from '../productos.json';
 
-export default function ItemDetailContainer({ item }) {
+export default function ItemDetailContainer() {
   const [selectedItem, setSelectedItem] = useState([]);
 
   const getItem = (item) =>
@@ -15,8 +16,8 @@ export default function ItemDetailContainer({ item }) {
       }, 2000);
     });
 
-  getItem(item)
-    .then((res) => setSelectedItem(res))
+  getItem(Products)
+    .then((res) => setSelectedItem(res[0]))
     .catch((err) => console.log(err));
   return <div>
       <ItemDetail item={selectedItem} />
