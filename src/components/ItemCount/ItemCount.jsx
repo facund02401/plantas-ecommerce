@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/ItemCount.scss";
 
-export default function ItemCounter({ onAdd, stock, initial }) {
+export default function ItemCounter({ stock, initial }) {
   let [counter, setCounter] = useState(initial);
 
   const countElements = (adding) => {
@@ -20,9 +20,8 @@ export default function ItemCounter({ onAdd, stock, initial }) {
     }
   };
 
-  return (
-    <div className="itemCards">
-      <div className="img"></div>
+  return (<>
+      
       <div className="counter">
         <button
           onClick={() => {
@@ -41,10 +40,10 @@ export default function ItemCounter({ onAdd, stock, initial }) {
         </button>
       </div>
       <div>
-        <button className="addCart" onClick={onAdd}>
+        <button className="addCart">
           Agregar al carrito
         </button>
       </div>
-    </div>
+    </>
   );
 }

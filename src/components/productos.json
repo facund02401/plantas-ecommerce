@@ -4,45 +4,59 @@
     "price": 350,
     "id": 1,
     "url": "https://http2.mlstatic.com/D_NQ_NP_632127-MLU40469427477_012020-O.jpg",
-    "category": "plantas"
+    "category": "planta",
+    "description": "El Timbo es un arbol nativo popularmente conocido como Oreja de Negro",
+    "stock": 3
   },
   {
     "name": "Ibirapita",
     "price": 500,
     "id": 2,
     "url": "https://http2.mlstatic.com/D_NQ_NP_796001-MLU41749469691_052020-O.jpg",
-    "category": "plantas"
+    "category": "planta",
+    "description": "El Ibitapita es un arbol nativo popularmente conocido como Arbol de Artigas",
+    "stock":2
   },
   {
     "name": "Ombu",
     "price": 700,
     "id": 3,
     "url": "https://http2.mlstatic.com/D_NQ_NP_944062-MLU45321604736_032021-O.jpg",
-    "category": "plantas"
+    "category": "planta",
+    "description": "El Ombu es un arbol nativo popularmente conocido por la amplitud de sus base",
+    "stock": 6
   },
   {
     "name": "Sustrato Comun",
     "price": 1200,
     "id": 4,
     "url": "https://www.flordeplanta.com.ar/wp-content/uploads/2014/05/sustrato.jpg",
-    "category": "sustrato"
+    "category": "sustrato",
+    "description": "Sustrato basico para cualquier tipo de plantas",
+    "stock":15
   },
   {"name": "Sustrato Profesional",
     "price": 1500,
     "id": 5,
     "url": "https://http2.mlstatic.com/D_NQ_NP_819675-MLA45991485623_052021-O.webp",
-    "category": "sustrato"
+    "category": "sustrato",
+    "description": "Sustrato profesional para plantas demandantes",
+    "stock":10
   },
   {"name": "Maceta mediana",
     "price": 500,
     "id": 6,
     "url": "https://www.raizmadre.com/image/cache/data/productos/Macetas%20plasticas/Clasica-2014[1]-400x400.jpg",
-    "category": "maceta"
+    "category": "maceta",
+    "description" : "Maceta mediana ideal para plantas de interior",
+    "stock":20
   },
   {"name": "Maceta Grande",
     "price": 700,
     "id": 7,
     "url": "https://www.altagraciadeco.com.uy/wp-content/uploads/2018/04/maceta-alta.jpg",
-    "category": "maceta"
+    "category": "maceta",
+    "description": "Maceta grande, recomendada para plantas de gran porte.",
+    "stock":8
   }
 ]

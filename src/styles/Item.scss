@@ -13,6 +13,7 @@ $mainColor: rgb(3, 95, 0);
     align-items: center;
     background-color: rgb(243, 247, 242);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .item-image{
@@ -30,9 +31,11 @@ $mainColor: rgb(3, 95, 0);
     border-radius: 10px;
     font-size: 18px;
     font-weight: 500;
+    text-decoration: none;
 }
 
 .item-name{
+    text-decoration: none;
     color: black;
     font-weight: 500;
 }

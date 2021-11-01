@@ -14,13 +14,13 @@ function NavBar() {
       </form>
       <ul>
         <li>
-          <NavLink to={'/category/plantas'}>Plantas</NavLink>
+          <NavLink to={'/category/planta'}>Plantas</NavLink>
         </li>
         <li>
-          <NavLink to={'/category/sustratos'}>Sustratos</NavLink>
+          <NavLink to={'/category/sustrato'}>Sustratos</NavLink>
         </li>
         <li>
-          <NavLink to={'/category/macetas'}>Macetas</NavLink>
+          <NavLink to={'/category/maceta'}>Macetas</NavLink>
         </li>
       </ul>
       <div className="iconos">
