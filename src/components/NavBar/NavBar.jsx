@@ -1,23 +1,26 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import '../../styles/App.scss';
 import CartWidget from "../CartWidget/CartWidget";
 
 function NavBar() {
   return (
     <nav>
+      <Link to={'/'}>
       <div className="logo"></div>
+      </Link>
       <form action="">
         <input type="text" value="" placeholder="Buscar en la página" />
       </form>
       <ul>
         <li>
-          <a href="">Plantas</a>
+          <NavLink to={'/category/plantas'}>Plantas</NavLink>
         </li>
         <li>
-          <a href="">Sustratos</a>
+          <NavLink to={'/category/sustratos'}>Sustratos</NavLink>
         </li>
         <li>
-          <a href="">Macetas</a>
+          <NavLink to={'/category/macetas'}>Macetas</NavLink>
         </li>
       </ul>
       <div className="iconos">
