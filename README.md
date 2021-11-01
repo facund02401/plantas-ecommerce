@@ -1,3 +1,8 @@
+# Sobre el proyecto
+Se trata de un e-commerce desarrollado para el curso de ReactJs de Coderhouse. 
+En el mismo, se pretende mostrar diferentes categorías de productos, pudiendo ser filtradas en cada uno de los links del NavBar, y desplegandose todas juntas en el home.
+Este proyecto va variando a medida que se va avanzando en el curso y se hace necesario aplicar nuevos conocimientos adquiridos.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
