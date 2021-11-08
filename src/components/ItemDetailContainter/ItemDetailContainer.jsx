@@ -22,7 +22,7 @@ export default function ItemDetailContainer() {
   useEffect(() => {
     getItem(Products)
       .then((res) => {
-        const filtrado = Products.find(product => product.id === itemId);
+        const filtrado = res.find(product => product.id === itemId);
         setSelectedItem(filtrado);
       })
       .catch((err) => console.log(err));
