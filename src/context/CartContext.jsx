@@ -37,7 +37,8 @@ function CartContextProvider({ children }) {
 
   const removeItem = (itemId) => {
     setCartData(cartData.filter((items) => items.id !== itemId));
-    setTotal(total.filter(item => )) // FALTA SACAR MONTO DEL TOTAL
+    const removeTotal = cartData.filter(item => item.id === itemId )
+    setTotal(total - removeTotal[0]["price"])
   };
 
   const clear = () => {
