@@ -10,3 +10,29 @@ i {
     opacity: 1;
   }
 }
+div.cart-widget__container {
+  width: 100px;
+  height: 100px;
+
+  .cart-widget__items {
+    background-color: red;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 70%;
+    left: 50%;
+    z-index: 1;
+    display: inline-block;
+
+    span {
+      display: block;
+      color: antiquewhite;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 1px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.cart-element__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border: olivedrab solid 2px;
+  background-color: rgba(106, 142, 35, 0.062);
+
+  border-radius: 10px;
+  width: 60%;
+  margin: 20px auto;
+  height: 40px;
+}
+.cart-element__item {
+  margin: 8px;
+}
+.cart {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cart-element__remove {
+  width: 20px;
+  height: 20px;
+  border-radius: 10%;
+  text-align: center;
+  margin: 8px;
+  color: papayawhip;
+  background-color: gray;
+  span {
+    padding: 2px;
+    margin: auto;
+  }
+}
