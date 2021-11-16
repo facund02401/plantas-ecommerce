@@ -3,6 +3,7 @@ import { useContext } from "react/cjs/react.development";
 import { CartContext } from "../../context/CartContext";
 import EmptyCart from "../EmptyCart/EmptyCart";
 import "../../styles/Cart.scss";
+import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 export default function Cart() {
   const { cartData, clear, removeItem, total } = useContext(CartContext);
@@ -21,6 +22,7 @@ export default function Cart() {
         ))}
         <li>Total: ${total}</li>
         <button onClick={() => clear()}>Vaciar Carrito</button>
+        <CheckoutForm />
       </div>
     );
   } else {
