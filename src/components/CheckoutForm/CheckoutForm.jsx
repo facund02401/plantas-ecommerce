@@ -3,7 +3,7 @@ import { useContext, useState } from "react/cjs/react.development";
 import { CartContext } from "../../context/CartContext";
 
 export default function CheckoutForm() {
-  const { cartData, total } = useContext(CartContext);
+  const { cartData, setCartData, total } = useContext(CartContext);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -30,6 +30,7 @@ export default function CheckoutForm() {
       total: total,
     };
     console.log(formData);
+    setCartData([])
   };
 
   return (
