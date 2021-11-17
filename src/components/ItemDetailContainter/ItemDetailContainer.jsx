@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "../ItemDetail/ItemDetail";
-//import Products from "../productos.json";
 import { getFirestore } from "../../firebase";
-import { collection, getDocs, docs, setDoc, query, where } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 export default function ItemDetailContainer() {
   const [selectedItem, setSelectedItem] = useState("");
@@ -18,7 +17,7 @@ useEffect(()=>{
   getDocs(q).then(snap => setSelectedItem(snap.docs.map(doc => doc.data())))
 
 
-},[])
+},[itemId])
 
 
   /* const getItem = (item) =>

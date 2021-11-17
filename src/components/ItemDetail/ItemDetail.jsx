@@ -12,7 +12,7 @@ export default function ItemDetail(item) {
   const saveQty = (counterQty) => {
     setCartQty(counterQty);
     //setTotal(+item.item.price * item.item.quantity)
-    addItem(item.item, counterQty);
+    addItem(itemInUse, counterQty);
   };
   console.log(cartData);
   console.log(total);
@@ -24,12 +24,12 @@ export default function ItemDetail(item) {
       <span className="item-detail__price"> ${itemInUse.price}</span>
       <span className="item-detail__stock">Stock: {itemInUse.stock}</span>
       <p className="item-detail__description">
-        <b>Descripcion: </b> {item.item.description}
+        <b>Descripcion: </b> {itemInUse.description}
       </p>
-      {isInCart(item.item.id) ? (
+      {isInCart(itemInUse.id) ? (
         <FinishShopping />
       ) : (
-        <ItemCounter stock={item.item.stock} initial={1} onAdd={saveQty} />
+        <ItemCounter stock={itemInUse.stock} initial={1} onAdd={saveQty} />
       )}
     </div>
   );
