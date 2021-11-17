@@ -3,13 +3,15 @@ import { useContext, useState } from "react/cjs/react.development";
 import { CartContext } from "../../context/CartContext";
 
 export default function CheckoutForm() {
-  const { cartData, setCartData, total } = useContext(CartContext);
+  const { cartData, checkedOut, total } = useContext(CartContext);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [formData, setFormData] = useState({})
 
   const nameHandler = (event) => {
     setName(event.target.value);
+    console.log(name)
   };
   const phoneHandler = (event) => {
     setPhone(event.target.value);
@@ -18,36 +20,42 @@ export default function CheckoutForm() {
     setEmail(event.target.value);
   };
 
-  const submitHandler = (event) => {
+  const formSubmitHandler = (event) => {
     event.preventDefault();
-    const formData = {
+    console.log('submiteado')
+    const auxFormData = {
       buyer: {
         name: name,
         phone: phone,
         email: email,
       },
-      item: { cartData },
+      item: cartData ,
       total: total,
     };
-    console.log(formData);
-    setCartData([])
+    setFormData(auxFormData)
+  console.log(formData)
+  checkedOut()
+  setName('')
+  setPhone('')
+  setEmail('')
+
   };
 
   return (
     <form>
       <div>
         <label htmlFor="name">Nombre:</label>
-        <input type="text" onChange={nameHandler} />
+        <input type="text" onChange={nameHandler} value={name} />
       </div>
       <div>
         <label htmlFor="phone">Telefono:</label>
-        <input type="text" onChange={phoneHandler} />
+        <input type="text" onChange={phoneHandler} value={phone} />
       </div>
       <div>
         <label htmlFor="email">Email:</label>
-        <input type="text" onChange={emailHandler} />
+        <input type="text" onChange={emailHandler} value={email} />
       </div>
-      <button type="submit" onSubmit={submitHandler}>
+      <button onClick={formSubmitHandler}>
         Finalizar compra
       </button>
     </form>
