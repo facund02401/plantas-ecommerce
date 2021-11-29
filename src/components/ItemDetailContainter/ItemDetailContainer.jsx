@@ -6,39 +6,16 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 
 export default function ItemDetailContainer() {
   const [selectedItem, setSelectedItem] = useState("");
-  const {id} = useParams()
-  const itemId = parseInt(id)
-  
-
-useEffect(()=>{
-  const db = getFirestore();
-
-  const q = query(collection(db, "item"), where("id", "==", itemId));
-  getDocs(q).then(snap => setSelectedItem(snap.docs.map(doc => doc.data())))
-
-
-},[itemId])
-
-
-  /* const getItem = (item) =>
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (item) {
-          resolve(item);
-        } else {
-          reject("No se puede acceder al detalle del producto.");
-        }
-      }, 2000);
-    });
+  const { id } = useParams();
+  const itemId = parseInt(id);
 
   useEffect(() => {
-    getItem(Products)
-      .then((res) => {
-        const filtrado = res.find(product => product.id === itemId);
-        setSelectedItem(filtrado);
-      })
-      .catch((err) => console.log(err));
-  }, [itemId]); */
+    const db = getFirestore();
+    const q = query(collection(db, "item"), where("id", "==", itemId));
+    getDocs(q).then((snap) =>
+      setSelectedItem(snap.docs.map((doc) => doc.data()))
+    );
+  }, [itemId]);
 
   return (
     <div>{selectedItem ? <ItemDetail item={selectedItem} /> : "Cargando"}</div>

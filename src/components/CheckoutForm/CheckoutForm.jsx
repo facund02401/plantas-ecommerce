@@ -1,17 +1,19 @@
 import React from "react";
 import { useContext, useState } from "react/cjs/react.development";
 import { CartContext } from "../../context/CartContext";
+import { getFirestore } from "../../firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 export default function CheckoutForm() {
   const { cartData, checkedOut, total } = useContext(CartContext);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [formData, setFormData] = useState({})
+  const [formData, setFormData] = useState({});
 
   const nameHandler = (event) => {
     setName(event.target.value);
-    console.log(name)
+    console.log(name);
   };
   const phoneHandler = (event) => {
     setPhone(event.target.value);
@@ -22,23 +24,25 @@ export default function CheckoutForm() {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    console.log('submiteado')
+    console.log("submiteado");
     const auxFormData = {
       buyer: {
         name: name,
         phone: phone,
         email: email,
       },
-      item: cartData ,
+      item: cartData,
       total: total,
     };
-    setFormData(auxFormData)
-  console.log(formData)
-  checkedOut()
-  setName('')
-  setPhone('')
-  setEmail('')
-
+    setFormData(auxFormData);
+    const db = getFirestore()
+const ordersCollection = collection(db, 'orders' )
+addDoc(ordersCollection, auxFormData).then(({id})=>console.log(id))
+    console.log(auxFormData);
+    checkedOut();
+    setName("");
+    setPhone("");
+    setEmail("");
   };
 
   return (
@@ -55,9 +59,7 @@ export default function CheckoutForm() {
         <label htmlFor="email">Email:</label>
         <input type="text" onChange={emailHandler} value={email} />
       </div>
-      <button onClick={formSubmitHandler}>
-        Finalizar compra
-      </button>
+      <button onClick={formSubmitHandler}>Finalizar compra</button>
     </form>
   );
 }

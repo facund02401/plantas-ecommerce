@@ -11,7 +11,6 @@ export default function ItemDetail(item) {
 
   const saveQty = (counterQty) => {
     setCartQty(counterQty);
-    //setTotal(+item.item.price * item.item.quantity)
     addItem(itemInUse, counterQty);
   };
   console.log(cartData);

@@ -7,21 +7,6 @@ function CartContextProvider({ children }) {
   const [cartData, setCartData] = useState([]);
   const [total, setTotal] = useState(0);
 
-  /* const calculateTotal = (total) => {
-    let totalArray = [];
-    console.log(cartData)
-    if (cartData) {
-      cartData.map((item) =>
-        totalArray.push(parseInt(item.price) * parseInt(item.quantity))
-      );
-      console.log(totalArray)
-      return setTotal(
-        totalArray.reduce((prevValue, nextValue) => prevValue + nextValue),
-        0
-      );
-    }
-  }; */
-
   const addItem = (item, qty) => {
     if (!isInCart(item.id)) {
       const cartList = [
@@ -51,7 +36,10 @@ function CartContextProvider({ children }) {
 
   const isInCart = (id) => cartData.find((item) => item.id === id);
 
-  const checkedOut = () => setCartData([]);
+  const checkedOut = () => {
+    setCartData([]);
+    setTotal(0);
+  };
 
   return (
     <CartContext.Provider
