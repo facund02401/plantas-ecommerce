@@ -12,7 +12,7 @@ export default function Cart() {
     return (
       <div className="cart">
         {cartData.map((item) => (
-          <div className="cart-element__card">
+          <div className="cart-element__card" key={item.name}>
             <li className="cart-element__item">
               {item.name} ${item.price} (x{item.quantity})
             </li>
