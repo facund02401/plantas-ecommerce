@@ -7,21 +7,27 @@ import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 export default function Cart() {
   const { cartData, clear, removeItem, total } = useContext(CartContext);
-  console.log(total);
 
   if (cartData.length) {
     return (
-      <div className='cart'>
+      <div className="cart">
         {cartData.map((item) => (
           <div className="cart-element__card">
-            <li className='cart-element__item'>
+            <li className="cart-element__item">
               {item.name} ${item.price} (x{item.quantity})
             </li>
-            <button className='cart-element__remove' onClick={() => removeItem(item.id)}><span>X</span></button>
+            <button
+              className="cart-element__remove"
+              onClick={() => removeItem(item.id)}
+            >
+              <span>X</span>
+            </button>
           </div>
         ))}
-        <li>Total: ${total}</li>
-        <button onClick={() => clear()}>Vaciar Carrito</button>
+        <div className="cart__total">
+          <li>Total: ${total}</li>
+          <button onClick={() => clear()}>Vaciar Carrito</button>
+        </div>
         <CheckoutForm />
       </div>
     );

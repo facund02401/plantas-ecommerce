@@ -20,9 +20,8 @@ export default function ItemCounter({ stock, initial, onAdd }) {
     }
   };
 
-
-  return (<>
-      
+  return (
+    <>
       <div className="counter">
         <button
           onClick={() => {
@@ -41,7 +40,7 @@ export default function ItemCounter({ stock, initial, onAdd }) {
         </button>
       </div>
       <div>
-        <button className="addCart" onClick={()=>onAdd(counter)}>
+        <button className="addCart" onClick={() => onAdd(counter)}>
           Agregar al carrito
         </button>
       </div>

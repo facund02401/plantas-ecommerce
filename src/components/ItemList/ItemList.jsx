@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const ItemList = ({items}) => {
   /*Recibe un array de objetos filtrados en ItemListContainer*/
-console.log(items)  
   return (
     <div className="item-list">
       {items.length //chequea que el length del array no sea falsy

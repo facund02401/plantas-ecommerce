@@ -13,8 +13,7 @@ export default function ItemDetail(item) {
     setCartQty(counterQty);
     addItem(itemInUse, counterQty);
   };
-  console.log(cartData);
-  console.log(total);
+
 
   return (
     <div className="item-detail__card">
