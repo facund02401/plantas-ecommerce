@@ -1,7 +1,7 @@
 # Sobre el proyecto
-Se trata de un e-commerce desarrollado para el curso de ReactJs de Coderhouse. 
-En el mismo, se pretende mostrar diferentes categorías de productos, pudiendo ser filtradas en cada uno de los links del NavBar, y desplegandose todas juntas en el home.
-Este proyecto va variando a medida que se va avanzando en el curso y se hace necesario aplicar nuevos conocimientos adquiridos.
+Se trata de un e-commerce desarrollado para el curso de ReactJs (comision 19745) de Coderhouse, dictado por Agustín Molés. 
+En el mismo, se trabaja con Firestore como DB desde donde se recuperan los productos de la tienda, ademas de almacenarse las ordenes de compra.
+Todo el proyecto se desarrolló usando React Functional Components.
 
 # Getting Started with Create React App
 
