@@ -6,7 +6,7 @@ import ItemCounter from "../ItemCount/ItemCount";
 
 export default function ItemDetail(item) {
   const [cartQty, setCartQty] = useState(0);
-  const { addItem, isInCart} = useContext(CartContext);
+  const { addItem, isInCart } = useContext(CartContext);
   const itemInUse = item.item[0];
 
   const saveQty = (counterQty) => {

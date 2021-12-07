@@ -24,10 +24,8 @@ function ItemListContainer() {
       const q = query(collection(db, "item"));
       gettingItems(q);
     }
-
   }, [id]);
 
-  
   return (
     <section>
       <ItemList items={productos} />

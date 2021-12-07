@@ -4,7 +4,7 @@ import Alert from "../Alert/Alert";
 
 export default function ItemCounter({ stock, initial, onAdd }) {
   let [counter, setCounter] = useState(initial);
-  const [alert, setAlert] = useState('')
+  const [alert, setAlert] = useState("");
 
   const countElements = (adding) => {
     if (adding) {
@@ -12,27 +12,24 @@ export default function ItemCounter({ stock, initial, onAdd }) {
       if (counter >= stock) {
         setCounter(stock);
         setAlert(`No hay mas de ${stock} elementos en stock`);
-      }
-      else{
-        setAlert('')
+      } else {
+        setAlert("");
       }
     } else {
       setCounter(counter - 1);
       if (counter <= initial) {
         setCounter(initial);
         setAlert(`No se puede agregar menos ${initial} elemento/s al carrito`);
-      }
-      else{
-        setAlert('')
+      } else {
+        setAlert("");
       }
     }
   };
 
   return (
     <>
-    {alert && <Alert prop={alert}/>}
+      {alert && <Alert prop={alert} />}
       <div className="counter">
-        
         <button
           onClick={() => {
             countElements(false);

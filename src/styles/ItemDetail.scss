@@ -1,37 +1,37 @@
 $mainColor: rgb(3, 95, 0);
 
-.item-detail__card{
-    margin: 0 auto;
-    padding: 8px;
-    height: auto;
-    width: 500px;
-    border: $mainColor solid 2px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(243, 247, 242);
+.item-detail__card {
+  margin: 0 auto;
+  padding: 8px;
+  height: auto;
+  width: 500px;
+  border: $mainColor solid 2px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(243, 247, 242);
 }
 
-.item-detail__image{
-    object-fit: cover;
-    width: 50%;
-    max-height: 75%;
-    border: $mainColor 1px solid;
-    border-radius: 10px;
+.item-detail__image {
+  object-fit: cover;
+  width: 50%;
+  max-height: 75%;
+  border: $mainColor 1px solid;
+  border-radius: 10px;
 }
 
-.item-detail__price{
-    padding: 4px;
-    background-color: $mainColor;
-    color: whitesmoke;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 500;
+.item-detail__price {
+  padding: 4px;
+  background-color: $mainColor;
+  color: whitesmoke;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.item-datail__name{
-    color: black;
-    font-weight: 500;
+.item-datail__name {
+  color: black;
+  font-weight: 500;
 }

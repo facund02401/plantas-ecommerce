@@ -42,6 +42,9 @@ export default function CheckoutForm() {
     setName("");
     setPhone("");
     setEmail("");
+    setTimeout(() => {
+      checkedOut();
+    }, 10000);
   };
 
   return (

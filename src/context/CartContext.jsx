@@ -15,7 +15,6 @@ function CartContextProvider({ children }) {
       ];
       setCartData(cartList);
       setTotal(total + item.price * qty);
-      console.log("Agregado!");
     }
   };
 
